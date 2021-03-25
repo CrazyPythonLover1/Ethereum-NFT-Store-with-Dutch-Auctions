@@ -2,4 +2,7 @@ build/contracts/*
 
 node_modules/*
 
+.secret/*
+/.secret
+
 *.DS_Store

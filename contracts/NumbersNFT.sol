@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity ^0.4.24;
 
 import "./tokens/NFTokenMetadata.sol";
 import "./tokens/NFTokenEnumerable.sol";

@@ -3,12 +3,12 @@
 window.addEventListener('load', async () => {
   // Modern dapp browsers...
   if (window.ethereum) {
-    window.web3 = new Web3(ethereum)
+    window.web3 = new Web3(window.ethereum)
     try {
       // Request account access if needed
       $('#overlay').show()
       $('#overlay .web3-not-unlocked').show()
-      await ethereum.enable()
+      await window.ethereum.enable()
       // Acccounts now exposed
       $('#overlay').hide()
 
@@ -29,7 +29,7 @@ window.addEventListener('load', async () => {
   }
   // Legacy dapp browsers...
   else if (window.web3) {
-    window.web3 = new Web3(web3.currentProvider)
+    window.web3 = new Web3(window.web3.currentProvider)
     // Acccounts always exposed
   }
   // Non-dapp browsers...
